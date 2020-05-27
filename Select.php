@@ -15,6 +15,6 @@ foreach ($_POST['Color'] as $select)
 {
 echo "You have selected :" .$select; // Displaying Selected Value
 }
+}
 ?>
-Copy
  
