@@ -1,3 +1,37 @@
 body {
-    background-image: url("img/gamingzone.jpg");
+    background-image: url("../img/gamingzone.jpg");
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 680px;
+}
+
+.container-fluid {
+    background-color: black;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+.navbar-header a {
+    color: white;
+    padding-right: 5px;
+}
+
+.middle-text {
+    border: solid 1px white;
+    position: relative;
+    height: 380px;
+    width: 380px;
+    left: 150px;
+    top: 120px;
+}
+
+.middle-text h1 {
+    color: white;
+    font-size: 50px;
+    font-family: monospace;
 }
