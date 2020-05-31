@@ -1,137 +1,102 @@
 <?php
+
+// login.php
+
+require("gamingzone_functions.php");
+
+//
 session_start();
 
-require("databaseconnect.php");
-
-if (isset($_POST["submit"]))
+if(!isset($_SESSION['loggedIn']))
 {
-    if(!$conn)
-    {
-        die("could not connect:" . mysqli_error());
-    }
-    else
-    {
-        $errors = [];
-        $firstname = $_POST["firstname"];
-        $firstname = trim($firstname); // will remove all white space at begining and end of variable
-        mysqli_real_escape_string($conn, $firstname); // will remove special text so we cant get hacked using mysql injection
-        if($firstname == "")
-        {
-            $errors[] = "Fill in your firstname";
-        }
-        $lastname = $_POST["lastname"];
-        $lastname = trim($lastname); 
-        mysqli_real_escape_string($conn, $lastname);
-        if($lastname == "")
-        {
-            $errors[] = "Fill in your lastname";
-        }
-        $streetname = $_POST["streetname"];
-        $streetname = trim($streetname); 
-        mysqli_real_escape_string($conn, $streetname);
-        if($streetname == "")
-        {
-            $errors[] = "Fill in your streetname";
-        }
-        $housenumber = $_POST["housenumber"];
-        $housenumber = trim($housenumber); 
-        mysqli_real_escape_string($conn, $housenumber);
-        if($housenumber == "")
-        {
-            $errors[] = "Fill in your housenumber";
-        }
-        $addition = $_POST["addition"];
-        $addition = trim($addition); 
-        mysqli_real_escape_string($conn, $addition);
-        $zipcode = $_POST["zipcode"];
-        $zipcode = trim($zipcode); 
-        mysqli_real_escape_string($conn, $zipcode);
-        if($zipcode == "")
-        {
-            $errors[] = "Fill in your zipcode";
-        }
-        $cityname = $_POST["cityname"];
-        $cityname = trim($cityname); 
-        mysqli_real_escape_string($conn, $cityname);
-        if($cityname == "")
-        {
-            $errors[] = "Fill in your cityname";
-        }
-        $email = $_POST["email"];
-        $email = trim($email); 
-        mysqli_real_escape_string($conn, $email);
-        if($email == "")
-        {
-            $errors[] = "Fill in your email";
-        }
-        $password = $_POST["password"];
-        $password = trim($password);
-        mysqli_real_escape_string($conn, $password);
-        if($password == "")
-        {
-            $errors[] = "Fill in your password";
-        }
-
-        // both passwords do not match
-        if($_POST['password'] != $_POST['passwordconfirm'])
-        {
-            $errors[] = "Passwords do not match";
-        }
-
-
-        if(count($errors) == 0)
-        {
-            $query = "INSERT INTO `users` (`firstname`,`lastname`,`streetname`,`housenumber`,`addition`,`zipcode`,`cityname`,`email`,`password`) VALUES ('$firstname','$lastname','$streetname','$housenumber','$addition','$zipcode','$cityname','$email','$password');";
-            //$query = "INSERT INTO `users` (`Firstname`, ``) VALUES ('$firstname' , '');";
-            mysqli_query($conn, $query);
-        }
-    }
+    $_SESSION['loggedIn'] = false;
 }
+
+if(isset($_POST['mylogin']))
+{
+    // form is submitted
+
+    // get posted data from login form
+
+    // define a query to send to the database
+
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $userPassword = mysqli_real_escape_string($conn, $_POST['userPassword']);
+    $debug = true;
+
+    // user = test
+    // pass = fiets
+
+    $stmt = $conn->prepare("SELECT * FROM `users` WHERE `userMail` = ?");
+
+
+    $query = "SELECT * FROM `users` WHERE `userMail` = '$username'";
+    $result = mysqli_query($conn, $query);
+
+    $result = mysqli_query($conn, "SELECT * FROM `users` WHERE `userMail` = '$username'");
+    if ($result && mysqli_num_rows($result) > 0)
+    {
+        $row = $result->fetch_array();
+        if ($row['userPassword'] == $userPassword)
+        {
+            $_SESSION['loggedIn'] = true;
+            $_SESSION['username'] = $row['userMail'];
+            $_SESSION['firstname'] = $row['userFirstName'];
+            $_SESSION['lastname'] = $row['userLastName'];
+            $_SESSION['address'] = $row['userAddress'];
+            $_SESSION['Street'] = $row['userStreet'];
+            $_SESSION['StreetNumber'] = $row['userStreetNumber'];
+        }
+    }
+
+}
+if(isset($_POST['mylogout']))
+{
+    // logout
+    session_destroy();
+    // reload the page
+    header("location:" . $_SERVER['PHP_SELF']);
+}
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>signinsignup</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<title>login</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    
+<div id="info">
     <?php
-    if(isset($errors) && count($errors) > 0)
+    if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] == false)
     {
-        echo "<div class=\"errorList\">\n";
-        echo "\t\t<ul>\n";
-        foreach($errors as $key => $value)
-        {
-            ?>
-            <li><?php echo $value; ?></li>
-            <?php
-        }
-        echo "</ul>";
-        echo "</div>";
-    }
-    ?>
-    
-<div id="container">
-
-    <div>
-    <form method="POST">
-    <input class="input" type="text" name="firstname" placeholder="Fill in your first name">
-    <input class="input" type="text" name="lastname" placeholder="Fill in your lastname">
-    <input class="input" type="text" name="streetname" placeholder="Fill in your streetname">
-    <input class="input" type="number" name="housenumber" placeholder="Fill in your housenumber">
-    <input class="input" type="text" name="addition" placeholder="If you have an addition, fill it in here">
-    <input class="input" type="text" name="zipcode" placeholder="Fill in your postal code">
-    <input class="input" type="text" name="cityname" placeholder="Fill in the name of the place where you live">
-    <input class="input" type="email" name="email" placeholder="Fill in your email">
-    <input class="input" type="password" name="password" placeholder="Fill in your password">
-    <input class="input" type="password" name="passwordconfirm" placeholder="confirm your password">
-    <div class="ToS">Agree with terms of use? <input id="checkbox" type="checkbox" name="ToS"> </div>
-    <input class="button" type="submit" name="submit" value="Make my account">
-    <a id="hyperlink" href="Login.php">Click here to login</a>
+        ?>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <input class="input" type="text" name="username" id="username">
+        <input class="input" type="userPassword" name="userPassword" id="userPassword">
+        <input class="buttons" type="submit" value="login" name="mylogin">
     </form>
-    <div>
-</div>
+        <?php
+    }
+    else
+    {
+        ?>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <li class="information"><p>Your name = <?php echo $_SESSION['firstname']; ?></p></li>
+            <li class="information"><p>Your lastname = <?php echo $_SESSION['lastname']; ?></p></li>
+            <li class="information"><p>Your mail = <?php echo $_SESSION['username']; ?></p></li>
+            <li class="information"><p>Your address = <?php echo $_SESSION['address']; ?></p></li>
+            <li class="information"><p>Your street = <?php echo $_SESSION['street']; ?></p></li>
+            <li class="information"><p>Your street number = <?php echo $_SESSION['streetNumber']; ?></p></li>
+            <input class="buttons" type="submit" value="logout" name="mylogout">
+        </form>
+        <?php
+        }
+        ?>
+    <a id="" href="signup.php">Click here to sign up</a>
+    </div>
 </body>
 </html>
