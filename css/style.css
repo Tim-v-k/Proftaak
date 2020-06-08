@@ -1,9 +1,9 @@
 body {
-    background-image: url("../img/gamingzone.jpg");
+    background-image: url("../img/a27fe2fe7a7537392ae0d468a7a8ab5e.jpg");
     background-position: center; 
     background-size: cover;
     background-repeat: no-repeat;
-    height: 680px;
+    height: 722px;
 }
 
 .container-fluid {
@@ -11,8 +11,8 @@ body {
 }
 
 .logo {
-    height: 50px;
-    width: 50px;
+    height: 8.5%;
+    width: 8.5%;
     float: left;
 }
 
@@ -22,12 +22,11 @@ body {
 }
 
 .middle-text {
-    border: solid 1px white;
     position: relative;
-    height: 380px;
-    width: 380px;
-    left: 150px;
-    top: 120px;
+    height: 25%;
+    width: 25%;
+    left: 10%;
+    top: 18%;
 }
 
 .middle-text h1 {
@@ -35,3 +34,28 @@ body {
     font-size: 50px;
     font-family: monospace;
 }
+
+.middle-text h2 {
+    color: white;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.Footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width:800px) {
+    .middle-text h1, .middle-text h2{
+        font-size: 20px;
+    }}
+
+@media screen and (max-width:800px) {
+    .middle-text {
+        left:5%;
+    }}

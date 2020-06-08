@@ -6,13 +6,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <img class="logo" src="img/unknown1.png"><a class="navbar-brand" href="index.php">Gaming Zone</a>
+      <img class="logo" src="img/unknown1.png"><a class="navbar-brand" href="HomePage.php">Gaming Zone</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="index.php">Home</a></li>
+      <li class="active"><a href="HomePage.php">Home</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
           <ul class="dropdown-menu">
