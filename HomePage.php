@@ -9,10 +9,36 @@
     <?php require("inc\KopBar.php"); ?>
 </head>
 <body>
+    <div class="bg">
 
-    <?php require("inc\Bar.php"); ?>    
+        <?php require("inc\Bar.php");?>    
 
-    <?php require("inc\Footer.php");?>
+        <div class="LeftBox">
+            <div class="PC">
+                <a href="PCProductPage.php">
+                <img src="img/Monogram-PC-Logo-Design-by-Greenlines-Studios.jpg"></a>
+            </div>
+            <div class="Playstation">
+                <a href="PlaystationProductPage.php">
+                <img src="img/playstation-5_n3m4.jpg"></a>
+            </div>
+            <div class="Xbox">
+                <a href="XboxProductPage.php">
+                <img src="img/Microsoft_XBOX-logo-84F3ECD063-seeklogo.com.png"></a>
+            </div>
+        </div>
 
+        <div class="BigBox">
+            <div class="TextBox">
+
+            </div>
+            <div class="ShownItems">
+
+            </div>
+        </div>  
+
+        <?php require("inc\Footer.php");?>
+
+    </div>
 </body>
 </html>
