@@ -30,10 +30,37 @@
 
         <div class="BigBox">
             <div class="TextBox">
-
+                <p>GamingZone</p>
             </div>
             <div class="ShownItems">
-
+                <div class="ProductOne">
+                    <div class="ProductItem">
+                    </div>
+                    <Button class="Button" href="#">BUY NOW!</Button>
+                    <div class="ItemPrice">
+                    </div>
+                </div>
+                <div class="ProductTwo">
+                    <div class="ProductItem">
+                    </div>
+                    <Button class="Button" href="#">BUY NOW!</Button>
+                    <div class="ItemPrice">
+                    </div>
+                </div>
+                <div class="ProductThree">
+                    <div class="ProductItem">
+                    </div>
+                    <Button class="Button" href="#">BUY NOW!</Button>
+                    <div class="ItemPrice">
+                    </div>
+                </div>
+                <div class="ProductFour">
+                    <div class="ProductItem">
+                    </div>
+                    <Button class="Button" href="#">BUY NOW!</Button>
+                    <div class="ItemPrice">
+                    </div>
+                </div>
             </div>
         </div>  
 

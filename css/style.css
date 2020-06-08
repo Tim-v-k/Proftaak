@@ -105,8 +105,74 @@ body, html {
     bottom: 57%;
 }
 
+.ProductOne {
+    border: solid 2px black;
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 23%;
+    margin-left: 1%;
+}
+
+.ProductItem {
+    border: solid 2px black;
+    position: relative;
+    height: 75%;
+    width: 100%;
+}
+
+.ItemPrice {
+    border: solid 2px black;
+    position: relative;
+    float: right;
+    height: 25%;
+    width: 50%;
+}
+
+.Button:hover,
+.Button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.Button {
+    position: relative;
+    left: 6.5%;
+    top: 20px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    font-family: monospace;
+}
+
+.ProductTwo {
+    border: solid 2px black;
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 23%;
+    margin-left: 2%;
+}
+
+.ProductThree {
+    border: solid 2px black;
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 23%;
+    margin-left: 2%;
+}
+
+.ProductFour {
+    border: solid 2px black;
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 23%;
+    margin-left: 2%;
+}
+
 .TextBox {
-    border: solid 1px white;
     position: relative;
     height: 20%;
     width: 50%;
@@ -114,12 +180,18 @@ body, html {
     top: 5%;
 }
 
+.TextBox p {
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    font-size: 80px;
+}
+
 .ShownItems {
-    border: solid 1px white;
     position: relative;
     height: 55%;
     width: 100%;
-    top: 25%;
+    top: 24%;
 }
 
 .Footer {
