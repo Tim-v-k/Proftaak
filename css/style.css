@@ -1,9 +1,17 @@
-body {
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
     background-image: url("../img/a27fe2fe7a7537392ae0d468a7a8ab5e.jpg");
-    background-position: center; 
-    background-size: cover;
+    height: 100%;
+    width: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
     background-repeat: no-repeat;
-    height: 722px;
+    background-size: cover;
 }
 
 .container-fluid {

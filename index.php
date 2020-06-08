@@ -9,7 +9,7 @@
     <?php require("inc\KopBar.php"); ?>
 </head>
 <body>
-    <div class="background">
+    <div class="bg">
         <?php require("inc\Bar.php"); ?>    
 
         <div class="middle-text">
@@ -18,6 +18,6 @@
         </div>
 
         <?php require("inc\Footer.php"); ?>
-    </div>  
+    </div>
 </body>
 </html>
