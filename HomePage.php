@@ -36,7 +36,7 @@
                 <div class="ProductOne">
                     <div class="ProductItem">
                     </div>
-                    <Button class="Button" href="#">BUY NOW!</Button>
+                    <div class="button_cont"><a class="Button" href="add-website-here" target="_blank" rel="nofollow noopener">BUY NOW!</a></div>
                     <div class="ItemPrice">
                     </div>
                 </div>

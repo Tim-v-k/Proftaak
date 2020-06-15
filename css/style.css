@@ -122,27 +122,37 @@ body, html {
 }
 
 .ItemPrice {
-    border: solid 2px black;
+    border: solid 1px black;
     position: relative;
+    bottom: 19.5%;
     float: right;
     height: 25%;
     width: 50%;
 }
 
-.Button:hover,
-.Button:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
+.Button {
+    color: green !important;
+    position: relative;
+    left: 5%;
+    top: 7px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: black;
+    font-family: monospace;
+    padding: 10px;
+    border: 4px solid green !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    border-radius: 25px;
+    border: none;
 }
 
-.Button {
-    position: relative;
-    left: 6.5%;
-    top: 20px;
-    color: white;
-    background-color: green;
-    text-align: center;
-    font-family: monospace;
+.Button:hover {
+    color: black !important;
+    background: darkgreen;
+    border-color: green !important;
+    transition: all 0.4s ease 0s;
+    text-decoration: none;
 }
 
 .ProductTwo {
@@ -247,23 +257,32 @@ body, html {
 }
 
 .SubmitButton {
+    color: green !important;
     position: relative;
-    color: white;
-    background-color: green;
-    text-align: center;
+    top: 7px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: black;
     font-family: monospace;
+    padding: 10px;
+    border: 4px solid green !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    border-radius: 25px;
+    border: none;
 }
 
-.SubmitButton:hover,
-.SubmitButton:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
+.SubmitButton:hover {
+    color: black !important;
+    background: darkgreen;
+    border-color: green !important;
+    transition: all 0.4s ease 0s;
+    text-decoration: none;
 }
 
 .form .required {
 	color: darkgreen;
 }
-
 
 .Footer {
     position: fixed;
@@ -434,7 +453,7 @@ body, html {
 
 
 #frmContact {
-    border: white 2px solid;
+    border: green 2px solid;
     background: transparent;
 	padding: 10px;
 }
@@ -481,11 +500,27 @@ body, html {
 }
 
 .btnAction {
-	background-color: green;
-    padding: 10px 40px;
-    color: #FFF;
-    border: #739690 1px solid;
-    border-radius: 4px; 
+    color: green !important;
+    position: relative;
+    top: 7px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: black;
+    font-family: monospace;
+    padding: 20px;
+    border: 4px solid green !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    border-radius: 25px;
+    border: none;
+}
+
+.btnAction:hover {
+    color: black !important;
+    background: darkgreen;
+    border-color: green !important;
+    transition: all 0.4s ease 0s;
+    text-decoration: none;
 }
 
 .btnAction:focus {
