@@ -17,8 +17,8 @@
         <li><a href="About.php">About</a></li>
         <li><a href="Contact.php">Contact</a></li>
         <li><a href="ShoppingCart.php">ShoppingCart</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="SignUp.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="LoginPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
