@@ -122,37 +122,27 @@ body, html {
 }
 
 .ItemPrice {
-    border: solid 1px black;
+    border: solid 2px black;
     position: relative;
-    bottom: 19.5%;
     float: right;
     height: 25%;
     width: 50%;
 }
 
-.Button {
-    color: green !important;
-    position: relative;
-    left: 5%;
-    top: 7px;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: black;
-    font-family: monospace;
-    padding: 10px;
-    border: 4px solid green !important;
-    display: inline-block;
-    transition: all 0.4s ease 0s;
-    border-radius: 25px;
-    border: none;
+.Button:hover,
+.Button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
 }
 
-.Button:hover {
-    color: black !important;
-    background: darkgreen;
-    border-color: green !important;
-    transition: all 0.4s ease 0s;
-    text-decoration: none;
+.Button {
+    position: relative;
+    left: 6.5%;
+    top: 20px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    font-family: monospace;
 }
 
 .ProductTwo {
@@ -204,86 +194,6 @@ body, html {
     top: 24%;
 }
 
-.form {
-    border: solid darkgreen 2px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 10px;
-    padding-top: 30px;
-    margin: 10px auto;
-    height: 570px;
-    width: 500px;
-    background-color: none;
-    color: white;
-}
-
-.form li {
-    padding: 0;
-	display: block;
-	list-style: none;
-	margin: 10px 0 0 0;
-}
-
-.form p {
-    font-weight: bold;
-    padding-top: 2px;
-}
-
-.form label {
-    margin:0 0 3px 0;
-	padding:0px;
-	display:block;
-	font-weight: bold;
-}
-
-.form input::placeholder {
-    color: black;
-}
-
-.form .field-divide {
-	width: 49%;
-}
-
-.form .field-long {
-	width: 100%;
-}
-
-.form .field-select {
-	width: 100%;
-}
-
-.form .field-textarea {
-	height: 100px;
-}
-
-.SubmitButton {
-    color: green !important;
-    position: relative;
-    top: 7px;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: black;
-    font-family: monospace;
-    padding: 10px;
-    border: 4px solid green !important;
-    display: inline-block;
-    transition: all 0.4s ease 0s;
-    border-radius: 25px;
-    border: none;
-}
-
-.SubmitButton:hover {
-    color: black !important;
-    background: darkgreen;
-    border-color: green !important;
-    transition: all 0.4s ease 0s;
-    text-decoration: none;
-}
-
-.form .required {
-	color: darkgreen;
-}
-
 .Footer {
     position: fixed;
     left: 0;
@@ -292,6 +202,16 @@ body, html {
     color: white;
     text-align: center;
 }
+
+@media screen and (max-width:800px) {
+    .middle-text h1, .middle-text h2{
+        font-size: 20px;
+    }}
+
+@media screen and (max-width:800px) {
+    .middle-text {
+        left:5%;
+    }}
 
 #firstbox {
     width: 260px;
@@ -397,7 +317,7 @@ body, html {
 }
 
 #products {
-    margin-left: 80px;
+    margin-left: 284px;
 }
 
 #sixthbox {
@@ -453,7 +373,7 @@ body, html {
 
 
 #frmContact {
-    border: green 2px solid;
+    border: white 2px solid;
     background: transparent;
 	padding: 10px;
 }
@@ -500,27 +420,11 @@ body, html {
 }
 
 .btnAction {
-    color: green !important;
-    position: relative;
-    top: 7px;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: black;
-    font-family: monospace;
-    padding: 20px;
-    border: 4px solid green !important;
-    display: inline-block;
-    transition: all 0.4s ease 0s;
-    border-radius: 25px;
-    border: none;
-}
-
-.btnAction:hover {
-    color: black !important;
-    background: darkgreen;
-    border-color: green !important;
-    transition: all 0.4s ease 0s;
-    text-decoration: none;
+	background-color: green;
+    padding: 10px 40px;
+    color: #FFF;
+    border: #739690 1px solid;
+    border-radius: 4px; 
 }
 
 .btnAction:focus {
@@ -549,13 +453,141 @@ body, html {
     margin-top: 144px;
 }
 
+#aboutsection {
+    color: white;
+    margin-left: 50px;
+    font-style: oblique;
+    text-align: left;
+    
+    border: rgb(103, 235, 42) 2px solid;
+    margin-right: 50px;
+    height: 600px;
+    background-color: black;
+}
 
-@media screen and (max-width:800px) {
-    .middle-text h1, .middle-text h2{
-        font-size: 20px;
-    }}
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
 
-@media screen and (max-width:800px) {
-    .middle-text {
-        left:5%;
-    }}
+
+
+.neons {
+   margin-top: 10rem;
+   text-align: center;
+}
+
+.neons h1 {
+  font-size: 9rem;
+  text-align: center;
+   font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+     from {
+      color: #fff;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+  }
+  
+  to {
+     color: gray;
+    text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+  }
+}
+
+#aboutsection-text {
+    margin-left: 40px;
+}
+
+
+.neon {
+    position: relative;
+    overflow: hidden;
+    filter: brightness(200%);
+}
+
+.text {
+    background-color: black;
+    color: white;
+    font-size: 180px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+    margin-left: 520px;
+}
+
+.text::before {
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    filter: blur(0.02em);
+    mix-blend-mode: difference;
+}
+
+.gradient {
+    position: absolute;
+    background: linear-gradient(45deg, rgb(77, 215, 233), rgb(77, 215, 233) rgb(77, 215, 233), rgb(77, 215, 233), white);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+    border: 2px solid rgb(103, 235, 42);
+}
+
+.spotlight {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle,
+            rgb(103, 235, 42),
+            transparent 25%
+        ) center / 25% 25%,
+        radial-gradient(
+            circle,
+            white,
+            black 25%
+        ) center / 12.5% 12.5%;
+    animation: light 5s linear infinite;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+}
+
+#checkfields {
+    position: absolute;
+    border: 2px solid white;
+    width: 360px;
+    height: 600px;
+    margin-left: 40px;
+    margin-top: 40px;
+    color: white;
+    
+}
+
+#checkfields h2{
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#playstation {
+    margin-left: 20px;
+}
+
+#xbox {
+    margin-left: 20px;
+}
+
+#pc {
+    margin-left: 20px;
+}
