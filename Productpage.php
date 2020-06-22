@@ -14,16 +14,23 @@
         <?php require("inc\Bar.php");?>    
         <div id="checkfields">
             <h2> Categories </h2>
-                    <input type="checkbox" id="playstation" name="scales"
-                    checked>
-                    <label for="playstation">Playstation</label>
-                    <input type="checkbox" id="xbox" name="scales"
-                    checked>
-                    <label for="xbox">xBox</label>
-                    <input type="checkbox" id="pc" name="scales"
-                    checked>
-                    <label for="pc">Pc</label>
-             </div>
+            <form method="POST">
+                <ul class="form">
+                    <li>
+                        <input type="checkbox" id="checkbox" name="scales" checked>
+                        <label for="playstation">Playstation</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox" name="scales" checked>
+                        <label for="xbox">xBox</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox" name="scales" checked>
+                        <label for="pc">Pc</label>
+                    </li>
+                </ul>
+            </form>
+        </div>
 <div id="products">
             <div id="firstbox">
             Product

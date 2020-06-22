@@ -591,3 +591,13 @@ body, html {
 #pc {
     margin-left: 20px;
 }
+
+#checkbox {
+    color: white;
+    text-decoration: none;
+    list-style: none; 
+}
+
+.form ul li{
+    list-style-type: none;
+}
