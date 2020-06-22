@@ -678,3 +678,45 @@ body, html {
 .SubmitButton:focus {
 	outline:none;
 }
+
+#CheckOutTable thead {
+    margin-top: 100px;
+    background-color: green;
+    color: white;
+    font-family: monospace;
+}
+
+#CheckOutTable th { 
+    padding: 10px;
+    color: white;
+    font-family: monospace;
+}
+
+#CheckOutTable tbody img {
+    width: 150px;
+    height: 150px;
+}
+
+#CheckOutTable tbody td {
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+}
+
+#CheckOutTable tfoot {
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    font-family: monospace;
+}
+
+#CheckOutTable {
+    width: 930px;
+    float: left;
+    position: relative;
+    left: 25%;
+    top: 120px;
+}

@@ -14,7 +14,7 @@
       <ul class="nav navbar-nav navbar-right">
       <li class="active"><a href="HomePage.php">Home</a></li>
         <li><a class="a" href="Productpage.php">Product</a></li>
-        <li><a class="a" href="About.php">About</a></li>
+        <li><a class="a" href="Aboutpage.php">About</a></li>
         <li><a class="a" href="Contact.php">Contact</a></li>
         <li><a class="a" href="ShoppingCart.php">ShoppingCart</a></li>
         <li><a class="a" href="SignUp.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
