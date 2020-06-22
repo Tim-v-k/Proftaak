@@ -15,7 +15,7 @@
         <div id="checkfields">
             <h2> Categories </h2>
             <form method="POST">
-                <ul class="form">
+                <ul class="formpje">
                     <li>
                         <input type="checkbox" id="checkbox" name="scales" checked>
                         <label for="playstation">Playstation</label>
@@ -27,6 +27,18 @@
                     <li>
                         <input type="checkbox" id="checkbox" name="scales" checked>
                         <label for="pc">Pc</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox" name="scales" checked>
+                        <label for="Mouse">Mouse</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox" name="scales" checked>
+                        <label for="Headphones">Headphones</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox" name="scales" checked>
+                        <label for="Keyboard">Keyboard</label>
                     </li>
                 </ul>
             </form>
