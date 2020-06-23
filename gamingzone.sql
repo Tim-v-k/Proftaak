@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 19 jun 2020 om 15:04
+-- Gegenereerd op: 23 jun 2020 om 20:05
 -- Serverversie: 10.4.11-MariaDB
 -- PHP-versie: 7.4.3
 
@@ -131,7 +131,16 @@ INSERT INTO `products` (`productId`, `productName`, `productPrice`, `productDesc
 (24, 'NZXT H710 i ', 197, 'This is a case.', '2020-06-19', 'img/Cases/h710-i.jpg', 21, 6, 3),
 (25, 'ASUS TUF Gaming GeForce GTX 1650 SUPER OC 4GB', 186, 'This is a graphics card.', '2020-06-19', 'img/Graphics Cards/gtx1650-4gb.jpg', 15, 7, 3),
 (26, 'ASUS DUAL RTX 2070 Super Evo OC 8G', 583, 'This is a graphics card.', '2020-06-19', 'img/Graphics Cards/rtx2070-9gb.jpg', 15, 7, 3),
-(27, 'MSI Radeon RX 5700 XT Gaming X', 483, 'This is a graphics card.', '2020-06-19', 'img/Graphics Cards/radeon-rx5700xt.jpg', 15, 7, 3);
+(27, 'MSI Radeon RX 5700 XT Gaming X', 483, 'This is a graphics card.', '2020-06-19', 'img/Graphics Cards/radeon-rx5700xt.jpg', 15, 7, 3),
+(28, 'Intel Core i9 10940X', 949, 'This is a CPU.', '2020-06-22', 'img/CPU/i9-10940x.jpg', 13, 8, 3),
+(29, 'Intel Core i5 9400F', 165, 'This is a CPU.', '2020-06-22', 'img/CPU/i5-9400f.jpg', 13, 8, 3),
+(30, 'Intel Core i3 9100F', 109, 'This is a CPU.', '2020-06-22', 'img/CPU/i3-9100f.jpg', 13, 8, 3),
+(31, 'Asus ROG STRIX B450-F GAMING', 118, 'This is a motherboard.', '2020-06-22', 'img/Motherboards/rog-strix-b450f.jpg', 15, 9, 3),
+(32, 'MSI B450 GAMING PRO CARBON AC', 149, 'This is a motherboard.', '2020-06-22', 'img/Motherboards/b450-procarbon.jpg', 24, 9, 3),
+(33, 'Asus ROG STRIX B460-H', 159, 'This is a motherboard.', '2020-06-22', 'img/Motherboards/rog-strixb460h.jpg', 15, 9, 3),
+(34, 'Corsair DDR4 Vengeance LPX 2x8GB 3600', 90, 'This is memory.', '2020-06-22', 'img/Memory/ddr4-vengeance-lpx-2x8.jpg', 5, 10, 3),
+(35, 'Kingston DDR4 HyperX FURY 2x8GB 2666', 74, 'This is memory.', '2020-06-22', 'img/Memory/kingston-ddr4-fury-2x8.jpg', 20, 10, 3),
+(36, 'Corsair DDR4 Vengeance LPX 2x16GB 3200', 213, 'This is memory.', '2020-06-22', 'img/Memory/ddr4-vengeance-lpx-2x16.jpg', 5, 10, 3);
 
 -- --------------------------------------------------------
 
@@ -236,7 +245,7 @@ ALTER TABLE `console`
 -- AUTO_INCREMENT voor een tabel `products`
 --
 ALTER TABLE `products`
-  MODIFY `productId` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `productId` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT voor een tabel `product_type`
