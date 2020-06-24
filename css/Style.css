@@ -194,77 +194,6 @@ body, html {
     top: 24%;
 }
 
-.form {
-    border: solid darkgreen 2px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 10px;
-    padding-top: 30px;
-    margin: 10px auto;
-    height: 570px;
-    width: 500px;
-    background-color: none;
-    color: white;
-}
-
-.form li {
-    padding: 0;
-	display: block;
-	list-style: none;
-	margin: 10px 0 0 0;
-}
-
-.form p {
-    font-weight: bold;
-    padding-top: 2px;
-}
-
-.form label {
-    margin:0 0 3px 0;
-	padding:0px;
-	display:block;
-	font-weight: bold;
-}
-
-.form input::placeholder {
-    color: black;
-}
-
-.form .field-divide {
-	width: 49%;
-}
-
-.form .field-long {
-	width: 100%;
-}
-
-.form .field-select {
-	width: 100%;
-}
-
-.form .field-textarea {
-	height: 100px;
-}
-
-.SubmitButton {
-    position: relative;
-    color: white;
-    background-color: green;
-    text-align: center;
-    font-family: monospace;
-}
-
-.SubmitButton:hover,
-.SubmitButton:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
-}
-
-.form .required {
-	color: darkgreen;
-}
-
-
 .Footer {
     position: fixed;
     left: 0;
@@ -273,6 +202,16 @@ body, html {
     color: white;
     text-align: center;
 }
+
+@media screen and (max-width:800px) {
+    .middle-text h1, .middle-text h2{
+        font-size: 20px;
+    }}
+
+@media screen and (max-width:800px) {
+    .middle-text {
+        left:5%;
+    }}
 
 #firstbox {
     width: 260px;
@@ -378,7 +317,7 @@ body, html {
 }
 
 #products {
-    margin-left: 80px;
+    margin-left: 284px;
 }
 
 #sixthbox {
@@ -514,13 +453,270 @@ body, html {
     margin-top: 144px;
 }
 
+#aboutsection {
+    color: white;
+    margin-left: 50px;
+    font-style: oblique;
+    text-align: left;
+    
+    border: rgb(103, 235, 42) 2px solid;
+    margin-right: 50px;
+    height: 600px;
+    background-color: black;
+}
 
-@media screen and (max-width:800px) {
-    .middle-text h1, .middle-text h2{
-        font-size: 20px;
-    }}
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
 
-@media screen and (max-width:800px) {
-    .middle-text {
-        left:5%;
-    }}
+
+
+.neons {
+   margin-top: 10rem;
+   text-align: center;
+}
+
+.neons h1 {
+  font-size: 9rem;
+  text-align: center;
+   font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+     from {
+      color: #fff;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+  }
+  
+  to {
+     color: gray;
+    text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+  }
+}
+
+#aboutsection-text {
+    margin-left: 40px;
+}
+
+
+.neon {
+    position: relative;
+    overflow: hidden;
+    filter: brightness(200%);
+}
+
+.text {
+    background-color: black;
+    color: white;
+    font-size: 180px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+    margin-left: 520px;
+}
+
+.text::before {
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    filter: blur(0.02em);
+    mix-blend-mode: difference;
+}
+
+.gradient {
+    position: absolute;
+    background: linear-gradient(45deg, rgb(77, 215, 233), rgb(77, 215, 233) rgb(77, 215, 233), rgb(77, 215, 233), white);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+    border: 2px solid rgb(103, 235, 42);
+}
+
+.spotlight {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle,
+            rgb(103, 235, 42),
+            transparent 25%
+        ) center / 25% 25%,
+        radial-gradient(
+            circle,
+            white,
+            black 25%
+        ) center / 12.5% 12.5%;
+    animation: light 5s linear infinite;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+}
+
+#checkfields {
+    position: absolute;
+    border: 2px solid white;
+    width: 360px;
+    height: 600px;
+    margin-left: 40px;
+    margin-top: 40px;
+    color: white;
+    
+}
+
+#checkfields h2{
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#playstation {
+    margin-left: 20px;
+}
+
+#xbox {
+    margin-left: 20px;
+}
+
+#pc {
+    margin-left: 20px;
+}
+
+#checkbox {
+    color: white;
+    text-decoration: none;
+    list-style: none; 
+}
+
+.formpje li{
+    list-style-type: none;
+}
+
+.form {
+    border: solid green 2px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    margin:10px auto;
+    height: 570px;
+    width: 500px;
+    background-color: none;
+    color: white;
+}
+
+.form li {
+    padding: 0;
+	display: block;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+
+.form p {
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.form label {
+    margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+
+.form input::placeholder {
+    color: black;
+}
+
+.form .field-divide {
+	width: 49%;
+}
+
+.form .field-long {
+	width: 100%;
+}
+.form .field-select {
+	width: 100%;
+}
+.form .field-textarea {
+	height: 100px;
+}
+.form input [type=submit], .form-style-1 input[type=button] {
+	background: purple;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.form input [type=submit]:hover, .form-style-1 input[type=button]:hover {
+	background: purple;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+.form .required {
+	color: lightgreen;
+}
+
+.SubmitButton {
+	background-color: green;
+    padding: 10px 40px;
+    color: #FFF;
+    border: #739690 1px solid;
+    border-radius: 4px; 
+}
+
+.SubmitButton:focus {
+	outline:none;
+}
+
+#CheckOutTable thead {
+    margin-top: 100px;
+    background-color: green;
+    color: white;
+    font-family: monospace;
+}
+
+#CheckOutTable th { 
+    padding: 10px;
+    color: white;
+    font-family: monospace;
+}
+
+#CheckOutTable tbody img {
+    width: 150px;
+    height: 150px;
+}
+
+#CheckOutTable tbody td {
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+}
+
+#CheckOutTable tfoot {
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    font-family: monospace;
+}
+
+#CheckOutTable {
+    width: 930px;
+    float: left;
+    position: relative;
+    left: 25%;
+    top: 120px;
+}
