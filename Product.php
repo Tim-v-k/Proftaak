@@ -45,6 +45,22 @@
                         <input type="checkbox" id="checkbox" name="scales" checked>
                         <label for="Cases">Cases</label>
                     </li>
+                    <li>
+                        <input type="checkbox" id="checkbox" name="scales" checked>
+                        <label for="CPU">CPU's</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox" name="scales" checked>
+                        <label for="Graphics-Cards">Graphics Cards</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox" name="scales" checked>
+                        <label for="Motherboard">Motherboards</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox" name="scales" checked>
+                        <label for="Memory">Memory</label>
+                    </li>
                 </ul>
             </form>
         </div>
