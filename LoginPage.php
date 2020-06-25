@@ -18,21 +18,17 @@
     {
         ?>
         <ul class="form">
-            <form method="POST">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <li>
                 <label>Fill in your username. <span class="required">* </span></label>
-                <input type="text" style="border-color:green" name="Username" placeholder="Fill in your username">
+                <input type="text" style="border-color:green" name="username" id="username" placeholder="Fill in your Email">
             </li>
             <li>
                 <label>Fill in your password. <span class="required">* </span></label>
-                <input type="password" style="border-color:green" name="password" placeholder="Fill in your password">
+                <input type="password" style="border-color:green" name="userPassword" id="userPassword" placeholder="Fill in your password">
             </li>
             <li>
-                <label>Confirm your password. <span class="required">* </span></label>
-                <input type="password" style="border-color:green" name="passwordconfirm" placeholder="Confirm your password">
-            </li>
-            <li>
-                <input type="submit" class="SubmitButton" name="submit" value="Login!">
+                <input type="submit" class="SubmitButton" name="mylogin" value="login">
             </li>
             </form>
         </ul>
@@ -41,6 +37,7 @@
     else
     {
     ?>
+    <div id="login-container">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <li class="information"><p>Your name = <?php echo $_SESSION['firstname']; ?></p></li>
     <li class="information"><p>Your lastname = <?php echo $_SESSION['lastname']; ?></p></li>
@@ -48,8 +45,9 @@
     <li class="information"><p>Your address = <?php echo $_SESSION['address']; ?></p></li>
     <li class="information"><p>Your street = <?php echo $_SESSION['street']; ?></p></li>
     <li class="information"><p>Your street number = <?php echo $_SESSION['streetNumber']; ?></p></li>
-    <input class="buttons" type="submit" value="logout" name="mylogout">
+    <input class="SubmitButton" type="submit" value="logout" name="mylogout">
     </form>
+    </div>
     <?php
     }
     ?>
