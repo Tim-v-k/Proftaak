@@ -19,12 +19,12 @@
         </script>
     </head>
 <body>
-    <select id="myDropDown">
+    <!-- <select id="myDropDown">
         <option value='' disabled selected>Sort</option>
         <option value='Games'>Games</option>
         <option value='PC'>Pc</option>
         <option value='Mouse'>Mouse</option>
-     </select>
+     </select> -->
 
 </body>
 </html>

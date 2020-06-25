@@ -56,6 +56,26 @@ function getProductsByType($productTypeId)
     return $products; 
 }
 
+function getProductById($productId)
+{
+    // var_dump($productTypeId);
+    // die;
+    $connection = dBconnect();
+
+    $products = array();
+
+    $getProductsSQL = "
+    SELECT * FROM `products` WHERE productId = " . $productId;
+
+    $resource = mysqli_query($connection, $getProductsSQL) or die (mysqli_error($connection));
+
+    while($row = mysqli_fetch_assoc($resource))
+    {
+        $products[] = $row;
+    }
+    return $products; 
+}
+
 
 // function getProductTypes($selectedVal)
 // {

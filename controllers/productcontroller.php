@@ -5,6 +5,9 @@ $result = array();
 
 if(!empty($_POST)){
     $action = $_POST['action'];
+    if($action == "asdf") {
+        return "Test123";
+    }
 }
 
 if(!empty($_GET)){
@@ -16,6 +19,12 @@ if(!empty($_GET)){
         $productTypeId = $_GET['productTypeId'];
         $result = getProductsByType($productTypeId);
     }
+
+    if($action == 'getProductById'){
+        $productId = $_GET['productId'];
+        $result = getProductsId($productId);
+    }
+    
 }
 $json = new JsonResult($result);
 echo json_encode($json);

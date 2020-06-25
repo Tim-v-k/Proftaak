@@ -25,23 +25,29 @@
 
 
 </div>
-        </body>
+</body>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/cart.js"></script>
     <script>
-    let option = "<option></option>";
-    let productItem = "<div class='game-item'><p class='name'></p><img src=''class='image'></img><p class='price'></p></div>";
 
+    let option = "<option></option>";
+    
+    let productItem = "<div class='product-item'><p class='product-name'></p>"+
+                      "<img src='' class='product-image'/>"+
+                      "<p class='product-description'></p>"+
+                      "<a class='product-link' href''>VIEW PRODUCT</a>"+
+                      "<p class='product-price'></p></div>";
+                      
         $(document).ready(function(){
             $.ajax({
-                url : "./test/productcontroler.php",
+                url : "./controllers/productcontroller.php",
                 type : "GET",
                 data : { 
                     action : 'getProductTypes',
                 },
                 success : function(data){
-                    // debugger;
                     let result = JSON.parse(data);
                     let productTypes = result.value;
                     for (let i = 0; i < productTypes.length; i++) {
@@ -61,7 +67,7 @@
                 let value = $(this).val();
                 console.log(value);
                 $.ajax({
-                    url : "./test/productcontroler.php",
+                    url : "./controllers/productcontroller.php",
                     type : "GET",
                     data : { 
                         action : 'getProductsByType', 
@@ -75,10 +81,14 @@
                         for (let i = 0; i < products.length; i++) {
                             let product = products[i];
                             let newProduct = $(productItem).clone();
-                            $(newProduct,".name").text(product.productName);
+                            let productLink = "detail-page.php?productId="+product.productId;
+
+                            $(newProduct).find(".product-description").text(product.productDescription);
+                            $(newProduct).find(".product-name").text(product.productName);
+                            $(newProduct).find(".product-image").attr('src', product.productImage);
+                            $(newProduct).find(".product-link").attr( 'href', productLink);
                             
-                            $(newProduct,".price").text(product.productPrice);
-                            // $(newProduct,".image").attr('src', product.productImage);
+
                             $('.products').append(newProduct);
                         }
                     }
