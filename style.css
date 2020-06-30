@@ -138,7 +138,7 @@ body, html {
 .Button {
     position: relative;
     left: 6.5%;
-    top: 20px;
+    top: 20%;
     color: white;
     background-color: green;
     text-align: center;
@@ -214,13 +214,13 @@ body, html {
     }}
 
 #firstbox {
-    width: 260px;
-    height: 320px;
+    width: 14%;
+    height: 40%;
     border: 2px solid white;
     color: white;
     position: absolute;
-    margin-left: 160px;
-    margin-top: 40px;
+    margin-left: 8.5%;
+    margin-top: 2.1%;
 }
 
 .button {
@@ -230,14 +230,14 @@ body, html {
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 242px;
-    height: 70px;
+    font-size: 124%;
+    padding: 7%;
+    width: 95%;
+    height: 15%;
     transition: all 0.5s;
     cursor: pointer;
-    margin-top: 220px;
-    margin-left: 5px;
+    margin-top: 80%;
+    margin-left: 2%;
   }
   
   .button span {
@@ -257,7 +257,7 @@ body, html {
   }
   
   .button:hover span {
-    padding-right: 25px;
+    padding-right: 20%;
   }
   
   .button:hover span:after {
@@ -266,8 +266,8 @@ body, html {
   }
 
   #text {
-    width: 260px;
-    height: 80px;
+    width: 102%;
+    height: 20%;
     border: 2px solid white;
     color: white;
     position: absolute;
@@ -277,98 +277,101 @@ body, html {
 }
 
 #secondbox {
-    width: 260px;
-    height: 320px;
+    width: 14%;
+    height: 40%;
     border: 2px solid white;
     color: white;
     position: absolute;
-    margin-left: 444px;
-    margin-top: 40px;
+    margin-left: 23%;
+    margin-top: 2.1%;
 }
 
 #thirdbox {
-    width: 260px;
-    height: 320px;
+    width: 14%;
+    height: 40%;
     border: 2px solid white;
     color: white;
     position: absolute;
-    margin-left: 732px;
-    margin-top: 40px;
+    margin-left: 38%;
+    margin-top: 2.1%;
 }
 
 #fourthbox {
-    width: 260px;
-    height: 320px;
+    width: 14%;
+    height: 40%;
     border: 2px solid white;
     color: white;
     position: absolute;
-    margin-left: 1016px;
-    margin-top: 40px;
+    margin-left: 52.8%;
+    margin-top: 2.1%;
 }
 
 #fifthbox {
-    width: 260px;
-    height: 320px;
+    width: 14%;
+    height: 40%;
     border: 2px solid white;
     color: white;
     position: absolute;
-    margin-left: 1300px;
-    margin-top: 40px;
+    margin-left: 67.5%;
+    margin-top: 2.1%;
+    margin-bottom: 5%;
 }
 
 #products {
-    margin-left: 80px;
+    float: left;
+    height: 40%;
+    margin-left: 15%;
 }
 
 #sixthbox {
-    width: 260px;
-    height: 320px;
+    width: 14%;
+    height: 40%;
     border: 2px solid white;
     color: white;
     position: absolute;
-    margin-left: 160px;
-    margin-top: 480px;
+    margin-left: 8.5%;
+    margin-top: 25%;
 }
 
 
 #seventhbox {
-    width: 260px;
-    height: 320px;
+    width: 14%;
+    height: 40%;
     border: 2px solid white;
     color: white;
     position: absolute;
-    margin-left: 444px;
-    margin-top: 480px;
+    margin-left: 23%;
+    margin-top: 25%;
 }
 
 #eightbox {
-    width: 260px;
-    height: 320px;
+    width: 14%;
+    height: 40%;
     border: 2px solid white;
     color: white;
     position: absolute;
-    margin-left: 732px;
-    margin-top: 480px;
+    margin-left: 38%;
+    margin-top: 25%;
 }
 
 #ninebox {
-    width: 260px;
-    height: 320px;
+    width: 14%;
+    height: 40%;
     border: 2px solid white;
     color: white;
     position: absolute;
-    margin-left: 1016px;
-    margin-top: 480px;
+    margin-left: 52.8%;
+    margin-top: 25%;
 }
 
 #tenthbox {
-    width: 260px;
-    height: 320px;
+    width: 14%;
+    height: 40%;
     border: 2px solid white;
     color: white;
     position: absolute;
-    margin-left: 1300px;
-    margin-top: 480px;
+    margin-left: 67.5%;
+    margin-top: 25%;
 }
 
 
@@ -446,9 +449,165 @@ body, html {
     }
 }
 
+@media all and (max-width: 550px) {
+    #products {
+        font-size: 8px;
+        height: 20%;
+    }
+}
+
+
+@media all and (max-width: 550px) {
+    #secondproducts {
+        margin-top: 200px;
+    }
+}
+
 #contactus-text {
     color: white;
     font-size: 80px;
     text-align: center;
     margin-top: 144px;
+}
+
+#aboutsection {
+    color: white;
+    margin-left: 50px;
+    font-style: oblique;
+    text-align: left;
+    
+    border: rgb(103, 235, 42) 2px solid;
+    margin-right: 50px;
+    height: 600px;
+    background-color: black;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
+
+
+
+.neons {
+   margin-top: 10rem;
+   text-align: center;
+}
+
+.neons h1 {
+  font-size: 9rem;
+  text-align: center;
+   font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+     from {
+      color: #fff;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+  }
+  
+  to {
+     color: gray;
+    text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+  }
+}
+
+#aboutsection-text {
+    margin-left: 40px;
+}
+
+
+.neon {
+    position: relative;
+    overflow: hidden;
+    filter: brightness(200%);
+}
+
+.text {
+    background-color: black;
+    color: white;
+    font-size: 180px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+    margin-left: 520px;
+}
+
+.text::before {
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    filter: blur(0.02em);
+    mix-blend-mode: difference;
+}
+
+.gradient {
+    position: absolute;
+    background: linear-gradient(45deg, rgb(77, 215, 233), rgb(77, 215, 233) rgb(77, 215, 233), rgb(77, 215, 233), white);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+    border: 2px solid rgb(103, 235, 42);
+}
+
+.spotlight {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle,
+            rgb(103, 235, 42),
+            transparent 25%
+        ) center / 25% 25%,
+        radial-gradient(
+            circle,
+            white,
+            black 25%
+        ) center / 12.5% 12.5%;
+    animation: light 5s linear infinite;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+}
+
+#checkfields {
+    position: absolute;
+    border: 2px solid white;
+    width: 20%;
+    height: 60%;
+    font-size: 100%;
+    margin-left: 2%;
+    margin-top: 2%;
+    color: white;
+    float: left;
+    
+}
+
+#checkfields h2{
+    margin-left: 5%;
+    font-size: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#playstation {
+    margin-left: 5%;
+}
+
+#xbox {
+    margin-left: 5%;
+}
+
+#pc {
+    margin-left: 5%;
 }
