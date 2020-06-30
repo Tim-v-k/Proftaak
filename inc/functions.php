@@ -38,8 +38,6 @@ function getProducts()
 
 function getProductsByType($productTypeId)
 {
-    // var_dump($productTypeId);
-    // die;
     $connection = dBconnect();
 
     $products = array();
@@ -56,27 +54,23 @@ function getProductsByType($productTypeId)
     return $products; 
 }
 
+function getProductById()
+{
+    $connection = dBconnect();
 
-// function getProductTypes($selectedVal)
-// {
-// $connection = dBconnect();
+    $products = array();
 
-// $Games = array();
+    $getProductsSQL = "
+    SELECT * FROM `products` WHERE productId = " . $productId;
 
-// $getGamesSQL = "
-// SELECT * FROM `products` WHERE productTypeId = $selectedVal
-// ";
+    $resource = mysqli_query($connection, $getProductsSQL) or die (mysqli_error($connection));
 
-// $resource = mysqli_query($connection, $getGamesSQL) or die (mysqli_error($connection));
-
-// while($row = mysqli_fetch_assoc($resource))
-// {
-//     $games[] = $row;
-// }
-// return $games; 
-
-
-// }
+    while($row = mysqli_fetch_assoc($resource))
+    {
+        $products[] = $row;
+    }
+    return $productDetail; 
+}
 
 function getProductTypes(){
     $connection = dBconnect();
@@ -108,26 +102,9 @@ function getProductsId($productId = false)
         $getproductInfoSQL .= " WHERE productId = " . $productId;
     }
 
-    //perform $query on $con and store resource
     $resource = mysqli_query($connection, $getproductInfoSQL) or die (mysqli_error($connection));
 
     $productInfo = mysqli_fetch_assoc($resource);
 
-    // echo var_dump($playersInfo);
-
     return $productInfo;
 }
-
-
-
-//////////////////////////Javascript
-
-
-// function processDrpdown($selectedVal) {
-//     echo "Selected value in php ".$selectedVal;
-// }
-
-// if (isset($_GET['dropdownValue'])){
-//     //call the function or execute the code
-//     getProductTypes($_GET['dropdownValue']);
-// }

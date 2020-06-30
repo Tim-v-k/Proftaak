@@ -33,7 +33,7 @@
         <textarea id="content" name="msg" class="demoInputBox" placeholder="Write your message" cols="30" rows="4" required></textarea>
     </div>
     <div>
-        <input type="submit" name="submit" class="btnAction" />
+        <input placeholder="submit" type="submit" name="submit" class="btnAction"></input>
     </div>
         </form>
             <div id="loader-icon" style="display: none;">

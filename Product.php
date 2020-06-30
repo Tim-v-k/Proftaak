@@ -6,165 +6,97 @@
     <?php require("inc\KopBar.php"); ?>
 </head>
 <body>
-    <div class="bg">
 
-        <?php require("inc\Bar.php");?>    
-        <div id="checkfields">
-            <h2> Categories </h2>
-            <form method="POST">
-                <ul class="formpje">
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="playstation">Playstation</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="xbox">Xbox</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="pc">PC</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="Mouse">Mouse</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="Headphones">Headphones</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="Keyboard">Keyboard</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="Consoles">Consoles</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="Cases">Cases</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="CPU">CPU's</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="Graphics-Cards">Graphics Cards</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="Motherboard">Motherboards</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" name="scales" checked>
-                        <label for="Memory">Memory</label>
-                    </li>
-                </ul>
-            </form>
-        </div>
-<div id="products">
-            <div id="firstbox">
-            Product
-                <div id="info">
-                <button class="button" style="vertical-align:middle"><span>More info </span></button>
-                </div>
-                <div id="text">
-                Gamename <br>
-                Price
-                </div>
-            </div>
-            <div id="secondbox">
-            Product
-                <div id="info">
-                <button class="button" style="vertical-align:middle"><span>More info </span></button>
-                </div>
-                <div id="text">
-                Gamename <br>
-                Price
-                </div>
-            </div>
-            <div id="thirdbox">
-            Product
-                <div id="info">
-                <button class="button" style="vertical-align:middle"><span>More info </span></button>
-                </div>
-                <div id="text">
-                Gamename <br>
-                Price
-                </div>
-            </div>
-            <div id="fourthbox">
-            Product
-                <div id="info">
-                <button class="button" style="vertical-align:middle"><span>More info </span></button>
-                </div>
-                <div id="text">
-                Gamename <br>
-                Price
-                </div>
-            </div>
-            <div id="fifthbox">
-            Product
-                <div id="info">
-                <button class="button" style="vertical-align:middle"><span>More info </span></button>
-                </div>
-                <div id="text">
-                Gamename <br>
-                Price
-                </div>
-            </div>
-            <div id="sixthbox">
-            Product
-                <div id="info">
-                <button class="button" style="vertical-align:middle"><span>More info </span></button>
-                </div>
-                <div id="text">
-                Gamename <br>
-                Price
-                </div>
-            </div>
-            <div id="seventhbox">
-            Product
-                <div id="info">
-                <button class="button" style="vertical-align:middle"><span>More info </span></button>
-                </div>
-                <div id="text">
-                Gamename <br>
-                Price
-                </div>
-            </div>
-            <div id="eightbox">
-            Product
-                <div id="info">
-                <button class="button" style="vertical-align:middle"><span>More info </span></button>
-                </div>
-                <div id="text">
-                Gamename <br>
-                Price
-                </div>
-            </div>
-            <div id="ninebox">
-            Product
-                <div id="info">
-                <button class="button" style="vertical-align:middle"><span>More info </span></button>
-                </div>
-                <div id="text">
-                Gamename <br>
-                Price
-                </div>
-            </div>
-            <div id="tenthbox">
-            Product
-                <div id="info">
-                <button class="button" style="vertical-align:middle"><span>More info </span></button>
-                </div>
-                <div id="text">
-                Gamename <br>
-                Price
-                </div>
-            </div>
+<div class="bg">
+
+        <?php require("inc\Bar.php");?> 
+        <div class="container">
+            <h2>Products</h2>
+<form id="form-products">
+
+	<select id="productTypeDropdown">
+		<option disabled selected value="">Product types:</option>
+	</select>
+</form>
+
+<div class="products">
+</div>
+
+
+</div>
+</body>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+
+    let option = "<option></option>";
+    
+    let productItem = "<div class='product-item'><p class='product-name'></p>"+
+                      "<img src='' class='product-image'/>"+
+                      "<p class='product-description'></p>"+
+                      "<a class='product-link' href''>VIEW PRODUCT</a>"+
+                      "<p class='product-price'></p></div>";
+                      
+        $(document).ready(function(){
+            $.ajax({
+                url : "./controllers/productcontroller.php",
+                type : "GET",
+                data : { 
+                    action : 'getProductTypes',
+                },
+                success : function(data){
+                    let result = JSON.parse(data);
+                    let productTypes = result.value;
+                    for (let i = 0; i < productTypes.length; i++) {
+                        let productType = productTypes[i];
+                        let newOption = $(option).clone();
+                        $(newOption).text(productType.productTypeName);
+                        $(newOption).val(productType.productTypeId);
+                        $('#productTypeDropdown').append(newOption);
+                    }
+                    
+                }
+
+
+            })
+
+            $('#productTypeDropdown').change(function(){
+                let value = $(this).val();
+                console.log(value);
+                $.ajax({
+                    url : "./controllers/productcontroller.php",
+                    type : "GET",
+                    data : { 
+                        action : 'getProductsByType', 
+                        productTypeId : value,
+                    },
+                    success : function(data){
+                        // debugger;
+                        $('.products').empty();
+                        let result = JSON.parse(data);
+                        let products = result.value;
+                        for (let i = 0; i < products.length; i++) {
+                            let product = products[i];
+                            let newProduct = $(productItem).clone();
+                            let productLink = "detail-page.php?productId="+product.productId;
+
+                            $(newProduct).find(".product-description").text(product.productDescription);
+                            $(newProduct).find(".product-name").text(product.productName);
+                            $(newProduct).find(".product-image").attr('src', product.productImage);
+                            $(newProduct).find(".product-link").attr( 'href', productLink);
+                            
+
+                            $('.products').append(newProduct);
+                        }
+                    }
+                })
+            });
+        });
+
+    </script>
+        
 </div>
             
             
