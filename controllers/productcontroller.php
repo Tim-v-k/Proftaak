@@ -21,8 +21,8 @@ if(!empty($_GET)){
     }
 
     if($action == 'getProductById'){
-        $productId = $_GET['productId'];
-        $result = getProductsId($productId);
+        $productDetail = $_GET['productId'];
+        $result = getProductsId($productDetail);
     }
     
 }

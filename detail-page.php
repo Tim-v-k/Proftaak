@@ -9,9 +9,9 @@
 
 <script>
 
-let productItem = "<div class='product-detail'><p class='product-name'></p>";
+let productDetailItem = "<div class='product-detail'><p class='productDetail-name'></p></div>";
 
-    $('.product-detail').change(function(){
+    $(document).ready(function(){
         let value = $(this).val();
         console.log(value);
         $.ajax({
@@ -22,22 +22,19 @@ let productItem = "<div class='product-detail'><p class='product-name'></p>";
                 productTypeId : value,
             },
             success : function(data){
-                console.log(productId);
-                die;
-                $('.product-detail').empty();
-                let result = JSON.parse(data);
-                let products = result.value;
-
-                let newProduct = $(productItem).clone();
+            $('.product-detail').empty();
+            let result = JSON.parse(data);
+            let newProductDetail = $(productDetailItem).clone();
+            let productDetail = result.value;
+            
+                $(newProductDetail).find(".productDetail-name").text(productDetail.productName);
                 
-                $(newProduct).find(".product-name").text(product.productName);
-
-                $('.product-detail').append(newProduct);
-                
+                $('.product-detail').append(newProductDetail);
             }
         })
     });
-        </script>
+</script>
+
 </body>
 
 </html>

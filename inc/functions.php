@@ -56,7 +56,7 @@ function getProductsByType($productTypeId)
     return $products; 
 }
 
-function getProductById($productId)
+function getProductById()
 {
     // var_dump($productTypeId);
     // die;
@@ -73,7 +73,7 @@ function getProductById($productId)
     {
         $products[] = $row;
     }
-    return $products; 
+    return $productDetail; 
 }
 
 
