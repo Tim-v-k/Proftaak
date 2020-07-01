@@ -15,15 +15,15 @@
 
         <div class="LeftBox">
             <div class="PC">
-                <a href="PCProductPage.php">
+                <a href="Product.php">
                 <img src="img/Monogram-PC-Logo-Design-by-Greenlines-Studios.jpg"></a>
             </div>
             <div class="Playstation">
-                <a href="PlaystationProductPage.php">
+                <a href="Product.php">
                 <img src="img/playstation-5_n3m4.jpg"></a>
             </div>
             <div class="Xbox">
-                <a href="XboxProductPage.php">
+                <a href="Product.php">
                 <img src="img/Microsoft_XBOX-logo-84F3ECD063-seeklogo.com.png"></a>
             </div>
         </div>
