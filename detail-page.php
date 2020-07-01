@@ -1,13 +1,26 @@
-<?php
-require("inc\KopBar.php");
-?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Proftaak">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>GamingZone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php require("inc\KopBar.php"); ?>
+</head>
 
 <body>
+
+<div class="bg">
+
+<?php require("inc\Bar.php"); ?>   
 
 <div class="product-detail">
     <p class='productDetail-name'>
         
     </p>  
+
+    <p class="Headerdescription">Description:</p>
 
     <img src='' class="productDetail-image"/>
 
@@ -15,14 +28,19 @@ require("inc\KopBar.php");
         
     </p>  
 
+    <p class="Header">Release Date:</p>
+
     <p class='productDetail-release'>
 
     </p>  
 
-    <p class='productDetail-price'></p>  
+    <p class="Header">Price:</p>
+
+    <p class='euroV2'>&euro;</p><p class='productDetail-price'></p>  
+
+    <a class='BuyButton' href="ShoppingCart.php">BUY!</a>
+
 </div>
-
-
 
 <script>
 
@@ -49,6 +67,10 @@ require("inc\KopBar.php");
         })
     });
 </script>
+
+<?php require("inc\Footer.php"); ?>
+
+</div>
 
 </body>
 

@@ -12,6 +12,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-y: auto;
 }
 
 .container-fluid {
@@ -202,6 +203,7 @@ body, html {
     width: 100%;
     color: white;
     text-align: center;
+    background-color: black;
 }
 
 @media screen and (max-width:800px) {
@@ -214,14 +216,87 @@ body, html {
         left:5%;
     }}
 
-#firstbox {
-    width: 260px;
-    height: 320px;
+.product-item {
+    width: 25%;
+    height: 500px;
     border: 2px solid white;
     color: white;
-    position: absolute;
-    margin-left: 160px;
-    margin-top: 40px;
+    float: left;
+    margin-left: 0%;
+    margin-right: 3%;
+    margin-top: 2%;
+    font-family: monospace;
+    font-size: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  /* Track /
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #002e62;
+    border-radius: 10px;
+  }
+
+  / Handle */
+  ::-webkit-scrollbar-thumb {
+    background: green;
+    border-radius: 10px;
+}
+
+.container {
+    margin-left: 0%;
+}
+
+.product-name {
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 7%;
+}
+
+.image-product{
+    height: 60%;
+    width: 100%;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+}
+
+.product-price {
+    float: right;
+    color: white;
+    margin-right: 5%;
+}
+
+.product-description{
+    color: white;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 7%;
+}
+
+.product-link {
+    background-color: green;
+    padding: 10px 40px;
+    color: #FFF;
+    border: #739690 1px solid;
+    border-radius: 4px; 
+    margin-left: 2%;
+    margin-bottom: 0 auto;
+}
+
+.product-link:focus {
+    outline:none;
+    text-decoration: none;
+}
+
+.product-link:hover {
+    text-decoration: none;
+    color: lightgray;
 }
 
 .button {
@@ -277,101 +352,9 @@ body, html {
     text-align: center;
 }
 
-#secondbox {
-    width: 260px;
-    height: 320px;
-    border: 2px solid white;
-    color: white;
-    position: absolute;
-    margin-left: 444px;
-    margin-top: 40px;
-}
-
-#thirdbox {
-    width: 260px;
-    height: 320px;
-    border: 2px solid white;
-    color: white;
-    position: absolute;
-    margin-left: 732px;
-    margin-top: 40px;
-}
-
-#fourthbox {
-    width: 260px;
-    height: 320px;
-    border: 2px solid white;
-    color: white;
-    position: absolute;
-    margin-left: 1016px;
-    margin-top: 40px;
-}
-
-#fifthbox {
-    width: 260px;
-    height: 320px;
-    border: 2px solid white;
-    color: white;
-    position: absolute;
-    margin-left: 1300px;
-    margin-top: 40px;
-}
-
 #products {
     margin-left: 284px;
 }
-
-#sixthbox {
-    width: 260px;
-    height: 320px;
-    border: 2px solid white;
-    color: white;
-    position: absolute;
-    margin-left: 160px;
-    margin-top: 480px;
-}
-
-
-#seventhbox {
-    width: 260px;
-    height: 320px;
-    border: 2px solid white;
-    color: white;
-    position: absolute;
-    margin-left: 444px;
-    margin-top: 480px;
-}
-
-#eightbox {
-    width: 260px;
-    height: 320px;
-    border: 2px solid white;
-    color: white;
-    position: absolute;
-    margin-left: 732px;
-    margin-top: 480px;
-}
-
-#ninebox {
-    width: 260px;
-    height: 320px;
-    border: 2px solid white;
-    color: white;
-    position: absolute;
-    margin-left: 1016px;
-    margin-top: 480px;
-}
-
-#tenthbox {
-    width: 260px;
-    height: 320px;
-    border: 2px solid white;
-    color: white;
-    position: absolute;
-    margin-left: 1300px;
-    margin-top: 480px;
-}
-
 
 #frmContact {
     border: white 2px solid;
@@ -722,12 +705,147 @@ body, html {
     top: 120px;
 }
 
-#login-container
-{
-
+select{
+    margin-left: 0%;
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 25px;
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: 12px 55px 15px 15px;
+    font-size: 14px;
+    color: white;
 }
 
-.information
-{
+#productTypeDropdown{
+  position: relative;
+  display: block;
+  max-width: 400px;
+  min-width: 180px;
+  margin: 0 auto;
+  border: 1px solid black;
+  background-color: green;
+  z-index: 10;
+  font-family: monospace;
+  font-weight: bold;
+}
 
+option {
+    color: white;
+}
+
+.container h2 {
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    font-size: 300%;
+}
+
+.product-detail {
+    border: solid 2px black;
+    width: 50%;
+    height: 75%;
+    color: white;
+    margin: 0 auto;
+    margin-top: 2%;
+    font-family: monospace;
+    font-size: 100%;
+    background-color: #29782a;
+    border-radius: 25px;
+}
+
+.productDetail-name {
+    color: white;
+    font-size: 250%;
+    text-align: left;
+    margin-left: 25%;
+    font-weight: bold;
+}
+
+.productDetail-image {
+    float: right;
+    margin-right: 2%;
+    border: solid 2px black;
+    height: 80%;
+    width: 40%;
+}
+
+.productDetail-description {
+    color: white;
+    margin-left: 10%;
+    text-align: left;
+    margin-bottom: 2%;
+    font-size: 100%;
+}
+
+.productDetail-release{
+    color: white;
+    margin-left: 10%;
+    text-align: left;
+    margin-bottom: 2%;
+    font-size: 100%;
+}
+
+.productDetail-price {
+    color: white;
+    margin-left: 10%;
+    text-align: left;
+    margin-bottom: 2%;
+    font-size: 100%;
+}
+
+.Header {
+    color: white;
+    margin-left: 10%;
+    text-align: left;
+    font-size: 130%;
+    margin-top: 3%;
+}
+
+.Headerdescription {
+    color: white;
+    margin-left: 10%;
+    text-align: left;
+    font-size: 130%;
+    margin-top: 3%;
+}
+
+.BuyButton {
+    background-color: black;
+    padding: 10px 40px;
+    color: white;
+    border: white 1px solid;
+    border-radius: 4px; 
+    margin-left: 10%;
+    margin-bottom: 0 auto;
+    margin-top: 20%;
+    text-decoration: none;
+}
+
+.BuyButton:focus {
+    outline:none;
+    text-decoration: none;
+}
+
+.BuyButton:hover {
+    text-decoration: none;
+    color: lightgray;
+    border: lightgray 1px solid;
+}
+
+.euro {
+    color: white;
+    float: left;
+    margin-left: 83%;
+}
+
+.euroV2 {
+    color: white;
+    float: left;
+    margin-left: 10%;
 }

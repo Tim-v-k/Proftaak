@@ -11,7 +11,7 @@
 
         <?php require("inc\Bar.php");?> 
         <div class="container">
-            <h2>Products</h2>
+            <h2>Products!</h2>
 <form id="form-products">
 
 	<select id="productTypeDropdown">
@@ -22,11 +22,6 @@
 <div class="products">
 </div>
 
-
-</div>
-</body>
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/cart.js"></script>
     <script>
@@ -34,10 +29,10 @@
     let option = "<option></option>";
     
     let productItem = "<div class='product-item'><p class='product-name'></p>"+
-                      "<img src='' class='product-image'/>"+
+                      "<div class='image-product'><img src='' class='product-image'/></div>"+
                       "<p class='product-description'></p>"+
                       "<a class='product-link' href''>VIEW PRODUCT</a>"+
-                      "<p class='product-price'></p></div>";
+                      "<p class='euro'>&euro;</p><p class='product-price'></p></div>";
                       
         $(document).ready(function(){
             $.ajax({
@@ -86,6 +81,7 @@
                             $(newProduct).find(".product-name").text(product.productName);
                             $(newProduct).find(".product-image").attr('src', product.productImage);
                             $(newProduct).find(".product-link").attr( 'href', productLink);
+                            $(newProduct).find(".product-price").text(product.productPrice);
                             
 
                             $('.products').append(newProduct);
