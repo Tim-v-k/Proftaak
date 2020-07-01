@@ -115,7 +115,7 @@ if (isset($_POST["submit"]))
 
     <div>
     <form method="POST">
-    <input class="input" type="text" name="userFirstName" placeholder="Fill in your first name">
+    <input class="input" type="text" name="userFirstName" placeholder="Fill in your first name 1">
     <input class="input" type="text" name="userLastName" placeholder="Fill in your last name">
     <input class="input" type="text" name="userAge" placeholder="Fill in your age">
     <input class="input" type="number" name="userAddress" placeholder="Fill in your Address">
