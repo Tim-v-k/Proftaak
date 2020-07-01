@@ -14,7 +14,7 @@
 
         <div class="middle-text">
             <h1>GamingZone</h1><br>
-            <h2>Welcome to this new gaming website.</h2>
+            <h2>Welcome to this new gaming website. 1</h2>
         </div>
 
         <?php require("inc\Footer.php"); ?>
