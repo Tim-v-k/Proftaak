@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 23 jun 2020 om 20:05
+-- Gegenereerd op: 01 jul 2020 om 15:59
 -- Serverversie: 10.4.11-MariaDB
--- PHP-versie: 7.4.3
+-- PHP-versie: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -91,7 +90,7 @@ INSERT INTO `console` (`consoleId`, `consoleType`) VALUES
 CREATE TABLE `products` (
   `productId` int(5) NOT NULL,
   `productName` varchar(100) NOT NULL,
-  `productPrice` int(5) NOT NULL,
+  `productPrice` varchar(100) NOT NULL,
   `productDescription` text NOT NULL,
   `productReleaseDate` date NOT NULL,
   `productImage` varchar(100) NOT NULL,
@@ -105,42 +104,42 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`productId`, `productName`, `productPrice`, `productDescription`, `productReleaseDate`, `productImage`, `brandId`, `productTypeId`, `consoleId`) VALUES
-(1, 'FIFA 20', 39, 'This is game where you can play football.', '2019-09-24', 'img/Games/fifa20.jpg', 2, 1, 1),
-(2, 'Grand Theft Auto V', 50, 'This is a game', '2013-09-17', 'img/Games/gta5.jpg', 1, 1, 1),
-(3, 'Red Dead Redemption 2', 30, 'This game is about shooting other people.', '2018-10-26', 'img/Games/rdr2.jpg', 1, 1, 2),
-(4, 'Grand Theft Auto: San Andreas', 11, 'This is a game where you can drive and shoot people.', '2004-10-26', 'img/Games/gta-sanandreas.jpg', 1, 1, 3),
-(5, 'Assassin\'s Creed: Odyssey', 28, 'This is a game about murdering people.', '2018-10-05', 'img/Games/ac-odyssey.jpg', 3, 1, 2),
-(6, 'Minecraft', 27, 'Game with blocks.', '2009-05-17', 'img/Games/minecraft.jpg', 8, 1, 3),
-(7, 'eFootball PES 2020', 50, 'This is a football game.', '2019-09-10', 'img/Games/pes2020.jpg', 9, 1, 1),
-(8, 'Star Wars Jedi: Fallen Order', 40, 'This is a game about Star Wars', '2019-11-15', 'img/Games/sw-fallenorder.jpg', 2, 1, 2),
-(9, 'Planet Coaster', 38, 'Game about building a themepark.', '2016-11-16', 'img/Games/planet-coaster.jpg', 10, 1, 3),
-(10, 'Logitech Mouse: G502 Hero', 60, 'This is a mouse', '2020-06-08', 'img/Mouses/g502-hero.jpg', 6, 4, 3),
-(11, 'SteelSeries Rival 600', 90, 'This is a mouse.', '2020-06-15', 'img/Mouses/rival600.jpg', 17, 4, 3),
-(12, 'Corsair Harpoon RGB Pro', 30, 'This is a mouse.', '2020-06-15', 'img/Mouses/harpoon-pro.jpg', 5, 4, 3),
-(13, 'Razer Ornata Chroma', 105, 'This is a keyboard.', '2020-06-15', 'img/Keyboards/ornata-chroma.jpg', 7, 2, 3),
-(14, 'SteelSeries Apex 7 Red', 190, 'This is a keyboard.', '2020-06-15', 'img/Keyboards/apex7-red.jpg', 17, 2, 3),
-(15, 'Logitech G910 Orion Spectrum', 170, 'This is a keyboard.', '2020-06-15', 'img/Keyboards/orion-spectrum.jpg', 6, 2, 3),
-(16, 'PlayStation 4 Slim (500 GB)', 329, 'Console to play games.', '2013-11-15', 'img/Consoles/ps4-slim.jpg', 18, 3, 1),
-(17, 'Playstation 4 Pro (1 TB)', 399, 'Console to play games.', '2013-11-15', 'img/Consoles/ps4-pro.jpg', 18, 3, 1),
-(18, 'Xbox One S (1 TB)', 229, 'Console to play games.', '2013-11-22', 'img/Consoles/xboxone-s.jpg', 19, 3, 2),
-(19, 'Steel series Arctis 3 - 2019 Edition', 60, 'This is a headset.', '2020-06-17', 'img/Headsets/arcits3.jpg', 17, 5, 3),
-(20, 'Logitech G332 Wired Gaming Headset', 60, 'This is a headset.', '2020-06-17', 'img/Headsets/g332.jpg', 6, 5, 3),
-(21, 'Hyperx Hx-Hsca-Rd Cloud Alpha', 90, 'This is a headset.', '2020-06-17', 'img/Headsets/cloud-alpha.jpg', 20, 5, 3),
-(22, 'Sharkoon TG4 RGB', 63, 'This is a case', '2020-06-19', 'img/Cases/tg4-rgb.jpg', 23, 6, 3),
-(23, 'Cooler master MasterBox MB511 midi-tower', 67, 'This is a case.', '2020-06-19', 'img/Cases/masterbox-mb511.jpg', 22, 6, 3),
-(24, 'NZXT H710 i ', 197, 'This is a case.', '2020-06-19', 'img/Cases/h710-i.jpg', 21, 6, 3),
-(25, 'ASUS TUF Gaming GeForce GTX 1650 SUPER OC 4GB', 186, 'This is a graphics card.', '2020-06-19', 'img/Graphics Cards/gtx1650-4gb.jpg', 15, 7, 3),
-(26, 'ASUS DUAL RTX 2070 Super Evo OC 8G', 583, 'This is a graphics card.', '2020-06-19', 'img/Graphics Cards/rtx2070-9gb.jpg', 15, 7, 3),
-(27, 'MSI Radeon RX 5700 XT Gaming X', 483, 'This is a graphics card.', '2020-06-19', 'img/Graphics Cards/radeon-rx5700xt.jpg', 15, 7, 3),
-(28, 'Intel Core i9 10940X', 949, 'This is a CPU.', '2020-06-22', 'img/CPU/i9-10940x.jpg', 13, 8, 3),
-(29, 'Intel Core i5 9400F', 165, 'This is a CPU.', '2020-06-22', 'img/CPU/i5-9400f.jpg', 13, 8, 3),
-(30, 'Intel Core i3 9100F', 109, 'This is a CPU.', '2020-06-22', 'img/CPU/i3-9100f.jpg', 13, 8, 3),
-(31, 'Asus ROG STRIX B450-F GAMING', 118, 'This is a motherboard.', '2020-06-22', 'img/Motherboards/rog-strix-b450f.jpg', 15, 9, 3),
-(32, 'MSI B450 GAMING PRO CARBON AC', 149, 'This is a motherboard.', '2020-06-22', 'img/Motherboards/b450-procarbon.jpg', 24, 9, 3),
-(33, 'Asus ROG STRIX B460-H', 159, 'This is a motherboard.', '2020-06-22', 'img/Motherboards/rog-strixb460h.jpg', 15, 9, 3),
-(34, 'Corsair DDR4 Vengeance LPX 2x8GB 3600', 90, 'This is memory.', '2020-06-22', 'img/Memory/ddr4-vengeance-lpx-2x8.jpg', 5, 10, 3),
-(35, 'Kingston DDR4 HyperX FURY 2x8GB 2666', 74, 'This is memory.', '2020-06-22', 'img/Memory/kingston-ddr4-fury-2x8.jpg', 20, 10, 3),
-(36, 'Corsair DDR4 Vengeance LPX 2x16GB 3200', 213, 'This is memory.', '2020-06-22', 'img/Memory/ddr4-vengeance-lpx-2x16.jpg', 5, 10, 3);
+(1, 'FIFA 20', '€39', 'This is game where you can play football.', '2019-09-24', 'img/Games/fifa20.jpg', 2, 1, 1),
+(2, 'Grand Theft Auto V', '€50', 'This is a game', '2013-09-17', 'img/Games/gta5.jpg', 1, 1, 1),
+(3, 'Red Dead Redemption 2', '€30', 'This game is about shooting other people.', '2018-10-26', 'img/Games/rdr2.jpg', 1, 1, 2),
+(4, 'Grand Theft Auto: San Andreas', '€11', 'This is a game where you can drive and shoot people.', '2004-10-26', 'img/Games/gta-sanandreas.jpg', 1, 1, 3),
+(5, 'Assassin\'s Creed: Odyssey', '€28', 'This is a game about murdering people.', '2018-10-05', 'img/Games/ac-odyssey.jpg', 3, 1, 2),
+(6, 'Minecraft', '€27', 'Game with blocks.', '2009-05-17', 'img/Games/minecraft.jpg', 8, 1, 3),
+(7, 'eFootball PES 2020', '€50', 'This is a football game.', '2019-09-10', 'img/Games/pes2020.jpg', 9, 1, 1),
+(8, 'Star Wars Jedi: Fallen Order', '€40', 'This is a game about Star Wars', '2019-11-15', 'img/Games/sw-fallenorder.jpg', 2, 1, 2),
+(9, 'Planet Coaster', '€38', 'Game about building a themepark.', '2016-11-16', 'img/Games/planet-coaster.jpg', 10, 1, 3),
+(10, 'Logitech Mouse: G502 Hero', '€60', 'This is a mouse', '2020-06-08', 'img/Mouses/g502-hero.jpg', 6, 4, 3),
+(11, 'SteelSeries Rival 600', '€90', 'This is a mouse.', '2020-06-15', 'img/Mouses/rival600.jpg', 17, 4, 3),
+(12, 'Corsair Harpoon RGB Pro', '€30', 'This is a mouse.', '2020-06-15', 'img/Mouses/harpoon-pro.jpg', 5, 4, 3),
+(13, 'Razer Ornata Chroma', '€105', 'This is a keyboard.', '2020-06-15', 'img/Keyboards/ornata-chroma.jpg', 7, 2, 3),
+(14, 'SteelSeries Apex 7 Red', '€190', 'This is a keyboard.', '2020-06-15', 'img/Keyboards/apex7-red.jpg', 17, 2, 3),
+(15, 'Logitech G910 Orion Spectrum', '€170', 'This is a keyboard.', '2020-06-15', 'img/Keyboards/orion-spectrum.jpg', 6, 2, 3),
+(16, 'PlayStation 4 Slim (500 GB)', '€329', 'Console to play games.', '2013-11-15', 'img/Consoles/ps4-slim.jpg', 18, 3, 1),
+(17, 'Playstation 4 Pro (1 TB)', '€399', 'Console to play games.', '2013-11-15', 'img/Consoles/ps4-pro.jpg', 18, 3, 1),
+(18, 'Xbox One S (1 TB)', '€229', 'Console to play games.', '2013-11-22', 'img/Consoles/xboxone-s.jpg', 19, 3, 2),
+(19, 'Steel series Arctis 3 - 2019 Edition', '€60', 'This is a headset.', '2020-06-17', 'img/Headsets/arcits3.jpg', 17, 5, 3),
+(20, 'Logitech G332 Wired Gaming Headset', '€60', 'This is a headset.', '2020-06-17', 'img/Headsets/g332.jpg', 6, 5, 3),
+(21, 'Hyperx Hx-Hsca-Rd Cloud Alpha', '€90', 'This is a headset.', '2020-06-17', 'img/Headsets/cloud-alpha.jpg', 20, 5, 3),
+(22, 'Sharkoon TG4 RGB', '€63', 'This is a case', '2020-06-19', 'img/Cases/tg4-rgb.jpg', 23, 6, 3),
+(23, 'Cooler master MasterBox MB511 midi-tower', '€67', 'This is a case.', '2020-06-19', 'img/Cases/masterbox-mb511.jpg', 22, 6, 3),
+(24, 'NZXT H710 i ', '€197', 'This is a case.', '2020-06-19', 'img/Cases/h710-i.jpg', 21, 6, 3),
+(25, 'ASUS TUF Gaming GeForce GTX 1650 SUPER OC 4GB', '€186', 'This is a graphics card.', '2020-06-19', 'img/Graphics Cards/gtx1650-4gb.jpg', 15, 7, 3),
+(26, 'ASUS DUAL RTX 2070 Super Evo OC 8G', '€583', 'This is a graphics card.', '2020-06-19', 'img/Graphics Cards/rtx2070-9gb.jpg', 15, 7, 3),
+(27, 'MSI Radeon RX 5700 XT Gaming X', '€483', 'This is a graphics card.', '2020-06-19', 'img/Graphics Cards/radeon-rx5700xt.jpg', 15, 7, 3),
+(28, 'Intel Core i9 10940X', '€949', 'This is a CPU.', '2020-06-22', 'img/CPU/i9-10940x.jpg', 13, 8, 3),
+(29, 'Intel Core i5 9400F', '€165', 'This is a CPU.', '2020-06-22', 'img/CPU/i5-9400f.jpg', 13, 8, 3),
+(30, 'Intel Core i3 9100F', '€109', 'This is a CPU.', '2020-06-22', 'img/CPU/i3-9100f.jpg', 13, 8, 3),
+(31, 'Asus ROG STRIX B450-F GAMING', '€118', 'This is a motherboard.', '2020-06-22', 'img/Motherboards/rog-strix-b450f.jpg', 15, 9, 3),
+(32, 'MSI B450 GAMING PRO CARBON AC', '€149', 'This is a motherboard.', '2020-06-22', 'img/Motherboards/b450-procarbon.jpg', 24, 9, 3),
+(33, 'Asus ROG STRIX B460-H', '€159', 'This is a motherboard.', '2020-06-22', 'img/Motherboards/rog-strixb460h.jpg', 15, 9, 3),
+(34, 'Corsair DDR4 Vengeance LPX 2x8GB 3600', '€80', 'This is memory.', '2020-06-22', 'img/Memory/ddr4-vengeance-lpx-2x8.jpg', 5, 10, 3),
+(35, 'Kingston DDR4 HyperX FURY 2x8GB 2666', '€74', 'This is memory.', '2020-06-22', 'img/Memory/kingston-ddr4-fury-2x8.jpg', 20, 10, 3),
+(36, 'Corsair DDR4 Vengeance LPX 2x16GB 3200', '€203', 'This is memory.', '2020-06-22', 'img/Memory/ddr4-vengeance-lpx-2x16.jpg', 5, 10, 3);
 
 -- --------------------------------------------------------
 
